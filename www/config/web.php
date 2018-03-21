@@ -4,6 +4,8 @@ $params = require __DIR__ . '/params.php';
 $db = require __DIR__ . '/db.php';
 
 $config = [
+    'name' => 'BasicTPL',
+    'language'=>'ru-RU',
     'id' => 'basic',
     'defaultRoute' => 'main/default/index',
     'basePath' => dirname(__DIR__),
@@ -41,6 +43,14 @@ $config = [
                 [
                     'class' => 'yii\log\FileTarget',
                     'levels' => ['error', 'warning'],
+                ],
+            ],
+        ],
+        'i18n' => [
+            'translations' => [
+                'app' => [
+                    'class' => 'yii\i18n\PhpMessageSource',
+                    'forceTranslation' => true,
                 ],
             ],
         ],
